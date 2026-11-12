@@ -1,0 +1,48 @@
+[
+  {
+    "q": "When does Toto's Journey release?",
+    "a": "The Steam release_date field on 12 November 2026 is Nov 18, 2026, with coming_soon true. The English store page showed the same planned date and said the game was not yet available. A studio post on 28 October 2026 also announced 18 November. An earlier post, on 30 September 2026, had only said Q4 2026 and that the exact date would come later.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes Toto's Journey?",
+    "a": "The Steam appdetails payload lists developer Hanuman Games and publishers Hanuman Games and Creata Games. The store page prints the same names. This wiki is not affiliated with Hanuman Games, Creata Games, or Valve.",
+    "featured": true
+  },
+  {
+    "q": "What kind of game is Toto's Journey?",
+    "a": "Steam's short description calls it a cozy adventure inspired by the world of The Wizard of Oz. You play as Toto, a dog lost in a magical world after a mysterious cyclone, and you explore, meet unusual creatures, and solve environmental puzzles while looking for a way home. Genres on the store page are Action, Adventure, Casual, and Indie. A 30 September 2026 studio post says the game is the studio's own interpretation of L. Frank Baum's The Wonderful Wizard of Oz, not a direct adaptation.",
+    "featured": true
+  },
+  {
+    "q": "Is there a Toto's Journey demo?",
+    "a": "Yes. Steam lists a free demo, AppID 5371190, named Toto's Journey Demo, with coming_soon false and a release_date of Oct 15, 2026. A studio post timestamped 15 October 2026 says the demo became available on 14 October and that no keys, requests, or invitations are needed. The demo's own short description field was empty on 12 November 2026, so this site does not invent what the demo contains.",
+    "featured": true
+  },
+  {
+    "q": "Are there Toto's Journey codes?",
+    "a": "No redeem-code list was on the Steam store page or in the studio posts checked on 12 November 2026. The demo announcement says no keys are needed. This site does not invent codes and does not have a codes page.",
+    "featured": true
+  },
+  {
+    "q": "Where are the Toto's Journey puzzle solutions?",
+    "a": "The store page and the developer diaries describe puzzle types: opening paths, restoring mechanisms, light and shadows, barking at magic crystals, digging in loose earth, and lifting large objects when a pink paw prompt appears. They do not publish a solution for any named puzzle. This site does not invent one.",
+    "featured": true
+  },
+  {
+    "q": "Can I play Toto's Journey on Mac, Linux, or a console?",
+    "a": "The full-game appdetails platforms field on 12 November 2026 lists Windows only. Mac and Linux are false. A 30 September 2026 post said the studio planned a PC release on Steam and a Steam Deck release, and that consoles were still being explored. That post is a plan. It is not a platforms flag in the 12 November payload."
+  },
+  {
+    "q": "What PC do I need for Toto's Journey?",
+    "a": "Full-game minimum on 12 November 2026: 64-bit Windows 11, Intel Core i5-10400F or AMD Ryzen 5 3600, 8 GB RAM, NVIDIA GeForce RTX 3060 with 8 GB, DirectX 12, 20 GB. Recommended: Windows 11, Intel Core i5-12600K or AMD Ryzen 5 5600X, 16 GB RAM, NVIDIA GeForce RTX 4070 with 12 GB, DirectX 12, 20 GB. The demo appdetails payload printed the same two blocks."
+  },
+  {
+    "q": "Does a controller work?",
+    "a": "The full-game appdetails payload sets controller_support to full and lists Full controller support, DualShock controller support, and DualSense controller support. One store screenshot shows a tutorial that names the E key and the Circle button for the same lift. This site has not tested a pad."
+  },
+  {
+    "q": "Is this site official?",
+    "a": "No. totosjourney.wiki is a fan guide. It is not affiliated with Hanuman Games, Creata Games, Valve, or Steam, and it is not affiliated with the Oz books or films. Account help uses the email community@hanumangames.com printed on the Steam store page. The store page did not list a support URL. That mailbox is not this wiki's."
+  }
+]

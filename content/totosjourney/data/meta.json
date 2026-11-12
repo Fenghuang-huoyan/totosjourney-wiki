@@ -1,0 +1,12 @@
+{
+  "release": "18 Nov 2026",
+  "price": "No price listed",
+  "priceNote": "On 12 Nov 2026 the full game was is_free false and package_groups was empty, so that payload had no public price. The store page still showed a planned date, not a purchase button.",
+  "players": "Single-player",
+  "playersNote": "The only player-mode category on the full-game appdetails list. No co-op or PvP category was present.",
+  "reviews": "Windows",
+  "reviewsNote": "Platforms on 12 Nov 2026: Windows true, Mac false, Linux false. The English store page showed no user reviews.",
+  "modes": "Free demo",
+  "modesNote": "Demo AppID 5371190 is type demo and is_free true. Its appdetails date is 15 Oct 2026. The full game was still coming soon.",
+  "platforms": "Windows"
+}

@@ -1,0 +1,291 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  modes: string;
+  modesNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages'))
+  .filter((page) => page.data.order < 10)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/library-hero.jpg',
+  hero2x: '/images/official/steam/library-hero-2x.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  storm: '/images/official/steam/ss-00.jpg',
+  platform: '/images/official/steam/ss-01.jpg',
+  sparks: '/images/official/steam/ss-03.jpg',
+  rodents: '/images/official/steam/ss-05.jpg',
+  lift: '/images/official/steam/ss-06.jpg',
+  cave: '/images/official/steam/ss-08.jpg',
+  dock: '/images/official/steam/ss-09.jpg',
+  camp: '/images/official/steam/ss-10.jpg',
+};
+
+const guideArt: Record<string, { src: string; alt: string }> = {
+  guide: {
+    src: art.capsule,
+    alt: "Official Steam capsule for Toto's Journey, a dog and a pink butterfly beside the painted title",
+  },
+  walkthrough: {
+    src: art.storm,
+    alt: "Steam screenshot of Toto's Journey, the dog near a wooden cart under a dark funnel cloud",
+  },
+  puzzles: {
+    src: art.lift,
+    alt: "Steam screenshot of Toto's Journey, a tutorial card about lifting a large object",
+  },
+  collectibles: {
+    src: art.sparks,
+    alt: "Steam screenshot of Toto's Journey, the dog sniffing a sack that spills golden sparks",
+  },
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'What the store says the cozy adventure is, the 18 November 2026 date, the free demo, and the Windows spec.',
+    image: art.capsule,
+    alt: "Official Steam capsule for Toto's Journey, a dog and a pink butterfly beside the painted title",
+  },
+  {
+    href: '/walkthrough',
+    num: '02',
+    title: 'Walkthrough',
+    text: 'Place names from the store and the diaries. No invented room order. The full game is not out.',
+    image: art.storm,
+    alt: "Steam screenshot of Toto's Journey, the dog near a wooden cart under a dark funnel cloud",
+  },
+  {
+    href: '/puzzles',
+    num: '03',
+    title: 'Puzzles',
+    text: 'The puzzle types official posts describe, and the one lift prompt printed on a store screenshot.',
+    image: art.lift,
+    alt: "Steam screenshot of Toto's Journey, a tutorial card about lifting a large object with telekinesis",
+  },
+  {
+    href: '/collectibles',
+    num: '04',
+    title: 'Collectibles',
+    text: 'Crystal shards and the three magical items a diary has named. No invented checklist.',
+    image: art.sparks,
+    alt: "Steam screenshot of Toto's Journey, the dog sniffing a sack that spills golden sparks",
+  },
+];
+
+const stills = [
+  {
+    src: art.storm,
+    alt: "Steam screenshot of Toto's Journey: a white and brown dog stands in grass near a wooden cart while a dark funnel cloud rises over the trees",
+    caption: 'Funnel cloud and cart',
+  },
+  {
+    src: art.platform,
+    alt: "Steam screenshot of Toto's Journey: the dog faces a seated person in a teal cap on a wooden platform, with a cart and pines behind them",
+    caption: 'Wooden platform',
+  },
+  {
+    src: art.rodents,
+    alt: "Steam screenshot of Toto's Journey: the dog looks toward a person lying in the grass among several large brown rodents",
+    caption: 'Grass and rodents',
+  },
+  {
+    src: art.cave,
+    alt: "Steam screenshot of Toto's Journey: the dog looks over a cave camp with wooden scaffolding, blue tents, and a mine track",
+    caption: 'Cave camp',
+  },
+  {
+    src: art.dock,
+    alt: "Steam screenshot of Toto's Journey: the dog stands on a wooden dock facing a building over the water, with a dark funnel cloud on the horizon",
+    caption: 'Dock and cloud',
+  },
+  {
+    src: art.camp,
+    alt: "Steam screenshot of Toto's Journey: the dog stands in tall grass beside a large cooking pot in a forest camp",
+    caption: 'Forest camp',
+  },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with Hanuman Games</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
+          sizes="(min-width: 1536px) 1536px, 100vw"
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · releases {meta.release}</p>
+          <h1>Toto's Journey unlocks on 18 November 2026.</h1>
+          <p class="lede">
+            English pages for the cozy adventure about Toto, a dog separated from Dorothy after a mysterious cyclone.
+            The full game was still marked coming soon. Where a puzzle answer or a collectible count was never printed, the page says so.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/walkthrough">Walkthrough</a>
+            <a class="btn ghost" href="/puzzles">Puzzles</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Four doors</h2>
+        <p class="section-intro">
+          Open the guide, the pre-release walkthrough, the puzzle types, or the named items. There is no codes page. The sources checked do not list a redeem program.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt={door.alt} width="616" height="353" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Six of the eleven screenshots on the Steam page. They show a storm, a platform, a meadow, a cave camp, a dock, and a forest camp. They are not a map, and the store does not caption them.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt={still.alt} width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.release}</strong><span>Steam release date. On 12 Nov 2026 the full game was still coming soon.</span></div>
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.modes}</strong><span>{meta.modesNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            "Toto's Journey is a cozy adventure from Hanuman Games, also published with Creata Games, on Steam (AppID 3724300). The store date is 18 November 2026. On 12 November 2026 the appdetails payload still marked it coming soon, Windows only, and not free.",
+            "The short description puts you in the role of Toto, a dog lost after a mysterious cyclone in a world inspired by The Wizard of Oz. You explore, meet unusual creatures, and solve environmental puzzles while looking for a way home. A 30 September 2026 studio post says this is the studio's own interpretation of L. Frank Baum's book, not a direct adaptation.",
+            "A free demo, AppID 5371190, is listed with coming_soon false and the date Oct 15, 2026. A studio post says the demo needs no key. The demo's description fields were empty, so this site does not invent demo chapters.",
+            "There is no redeem-code list. Puzzle solutions and collectible totals that the store never printed stay off those pages. A screenshot is not treated as a map.",
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page or a studio post is labeled with the day it was read. A missing stat stays missing.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img
+                  src={guideArt[page.id]?.src ?? art.header}
+                  alt={guideArt[page.id]?.alt ?? "Official Steam header for Toto's Journey"}
+                  width="600"
+                  height="338"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The store page, the demo, and the studio site are {siteConfig.databases.map((db, i) => (
+                <><a href={db.href}>{db.label}</a>{i < siteConfig.databases.length - 1 ? ', ' : ''}</>
+              ))}. This site is the skim: the premise, the free demo, the place names those sources use, and the puzzle types they describe.
+            </p>
+            <p>
+              The full game is scheduled to unlock on {meta.release}. If the client and this page disagree, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} develops the game. The publishers are {siteConfig.publisher}. Platforms on the API: {meta.platforms}. Genres: Action, Adventure, Casual, and Indie. The support email on the store page is community@hanumangames.com. No support URL was printed there.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>

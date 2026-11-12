@@ -1,0 +1,78 @@
+Official Steam store assets for Toto's Journey (AppID 3724300).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 12 Nov 2026.
+Fan site: not affiliated with Hanuman Games, Creata Games, Valve, or Steam.
+Store page: https://store.steampowered.com/app/3724300/Totos_Journey/
+Appdetails header and capsule URLs use asset cache t=1793627236.
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/library_hero.jpg
+
+library-hero-2x.jpg
+  Steam library hero, 3840x1240
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/library_hero_2x.jpg
+
+header.jpg
+  Store header from appdetails header_image, 460x215 (hashed path)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/92e1d5509cb77280e69a080068dcc16effa0d3ab/header.jpg?t=1793627236
+
+The unhashed library_header.jpg URL returned HTTP 404 on 12 Nov 2026.
+https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/library_header.jpg
+It is not stored in this folder. header.jpg above is the store header.
+
+capsule-616x353.jpg
+  Store capsule, 616x353 (hashed path shown on the English store page)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/7bd5cfe617b0e35c2305f3ab906dd6a6365c5705/capsule_616x353.jpg?t=1793627236
+
+capsule-231x87.jpg
+  Small store capsule, 231x87 (hashed path from appdetails)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/0a505c51bc57d462c7c6914ac2256cea81639c9f/capsule_231x87.jpg?t=1793627236
+
+Screenshots are the store thumbnails from appdetails on 12 Nov 2026 (t=1793627236).
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+Thumbnail pixel sizes vary slightly around 600x338.
+
+ss-00.jpg
+  The dog near a wooden cart, with a dark funnel cloud over the trees and birds overhead.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/5ad7e483909a13ace5ae1824ddcb9552f1a225ac/ss_5ad7e483909a13ace5ae1824ddcb9552f1a225ac.600x338.jpg?t=1793627236
+
+ss-01.jpg
+  The dog on a wooden platform facing a seated person, with a cart and pines behind them.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/029f266e483cbf8fca408a10fbbf82b61bdffbc6/ss_029f266e483cbf8fca408a10fbbf82b61bdffbc6.600x338.jpg?t=1793627236
+
+ss-02.jpg
+  The dog on a rocky path in a sunlit gorge.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/49a1d3e126e40caba2ea3964d41d1ed8d2202df4/ss_49a1d3e126e40caba2ea3964d41d1ed8d2202df4.600x338.jpg?t=1793627236
+
+ss-03.jpg
+  The dog beside a sack spilling golden sparks, near a bucket and a twisted root arch.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/bc2151607d8f70412974a60360c239fbd32552bb/ss_bc2151607d8f70412974a60360c239fbd32552bb.600x338.jpg?t=1793627236
+
+ss-04.jpg
+  The dog next to three people seated at a wooden table.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/058617376460573f96318d01deecad3cb015fb32/ss_058617376460573f96318d01deecad3cb015fb32.600x338.jpg?t=1793627236
+
+ss-05.jpg
+  The dog among several large brown rodents, with a person lying in the grass and a cart beyond a fence.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/4ee779fd2f53639daf49d74b5d8fb071992e5f45/ss_4ee779fd2f53639daf49d74b5d8fb071992e5f45.600x338.jpg?t=1793627236
+
+ss-06.jpg
+  A tutorial card titled TELEKINES: OBSTACLES, with the dog in front of a rocky passage.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/71e805326dfb4c558b497d83ad4077cf27e34ddd/ss_71e805326dfb4c558b497d83ad4077cf27e34ddd.600x338.jpg?t=1793627236
+
+ss-07.jpg
+  The dog facing a person at a blue-tent stall inside a cave, with an E prompt.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/1830a400e598d0da93011154dc46b046cca3ade1/ss_1830a400e598d0da93011154dc46b046cca3ade1.600x338.jpg?t=1793627236
+
+ss-08.jpg
+  A cave camp with wooden scaffolding, blue tents, and a mine track.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/f2618f39d381802906fba969516e76fe9b198802/ss_f2618f39d381802906fba969516e76fe9b198802.600x338.jpg?t=1793627236
+
+ss-09.jpg
+  The dog on a wooden dock facing a building over the water, with a funnel cloud on the horizon.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/f77f9c923874a6ac827e72806b8c1a066b3bfa05/ss_f77f9c923874a6ac827e72806b8c1a066b3bfa05.600x338.jpg?t=1793627236
+
+ss-10.jpg
+  The dog in tall grass beside a cooking pot in a forest camp.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3724300/f6f9dccf2a445e859ecbf9951935ef00f4e67b20/ss_f6f9dccf2a445e859ecbf9951935ef00f4e67b20.600x338.jpg?t=1793627236

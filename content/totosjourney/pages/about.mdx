@@ -1,0 +1,64 @@
+---
+title: "About the Toto's Journey Guide"
+description: "totosjourney.wiki is an unofficial English fan guide for Toto's Journey. What it quotes, which Steam images it hosts, and why it has no codes page."
+h1: "About this unofficial guide"
+section: "About"
+order: 10
+verifiedAgainst: "Site policy for totosjourney.wiki, plus the Steam store page, demo appdetails, and the linked Steam news posts, checked 12 Nov 2026."
+quickAnswer:
+  - "Toto's Journey Guide is a fan site for https://totosjourney.wiki. It is not affiliated with Hanuman Games, Creata Games, Valve, or Steam, and it is not affiliated with the Oz books or films."
+  - "Pages are English on purpose. Steam lists eleven languages. This wiki writes in one."
+  - "Artwork is official Steam store art for AppID 3724300, stored with the site. Credits are in the attribution file next to the images."
+  - "Analytics is off, because analytics.gaId is empty. The ad slot is off, because ads are disabled and the zone id is empty. There is no redeem-code page."
+sources:
+  - label: "Steam store — Toto's Journey"
+    url: "https://store.steampowered.com/app/3724300/Totos_Journey/"
+  - label: "Steam demo — Toto's Journey Demo"
+    url: "https://store.steampowered.com/app/5371190/Totos_Journey_Demo/"
+  - label: "totosjourney.com"
+    url: "https://totosjourney.com/"
+related:
+  - href: "/disclaimer"
+    label: "Disclaimer"
+  - href: "/privacy"
+    label: "Privacy"
+  - href: "/guide"
+    label: "Guide"
+banner: "/images/official/steam/header.jpg"
+bannerAlt: "Official Steam header for Toto's Journey, a white and brown dog looking up at a pink butterfly beside the title"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+This is a short English wiki for **Toto's Journey**, Steam AppID **3724300**, built as a static site for **totosjourney.wiki**.
+
+## What the pages will and will not say
+
+The [guide](/guide), [walkthrough](/walkthrough), [puzzles](/puzzles), and [collectibles](/collectibles) pages quote dated Steam text. A place name, a puzzle rule, or an item appears only when the store page or a Hanuman Games post on Steam used it. There is no codes page because those sources do not publish a redeem program. The October 2026 demo post says the demo needs no key.
+
+A sentence about the Oz books stays inside the studio's own wording. The 5 September 2025 announcement calls the game an independent creation inspired by L. Frank Baum's public-domain *The Wonderful Wizard of Oz* (1900), and says it is not affiliated with trademark holders. This site does not claim any other relationship to the books or the films.
+
+<Callout kind="note" title="What “checked” means">
+“Checked 12 Nov 2026” means the Steam API, the English store page, the demo listing, and the linked news posts were read that day. It does not mean someone finished the launch build. The full game was still marked coming soon, with the store date 18 November 2026.
+</Callout>
+
+## Images
+
+The library hero, capsules, the store header, and screenshots are official Steam store assets for AppID 3724300. They were downloaded from the Steam CDN and are served from this site so pages do not hotlink Steam. The file list and source URLs are in [ATTRIBUTION.txt](/images/official/steam/ATTRIBUTION.txt). The favicon is original. It is not a Hanuman Games or Valve logo, and it is not the key art from the store capsule.
+
+## Privacy and ads
+
+The site is static. It has no accounts and does not ask for your Steam login.
+
+`analytics.gaId` is an empty string. The base layout does not load Google Analytics.
+
+The Adsterra slot named `afterQuickAnswer` is not active. `enabled` is false, and the zone id and script URL are empty. No advertising script from another game is included. The 404 page does not render a slot.
+
+The same privacy note is in the footer of every page. The legal wording is also on [Privacy](/privacy) and [Disclaimer](/disclaimer).
+
+## What is still unpublished
+
+- A numeric Steam price. The 12 November appdetails payload had an empty package list, and `is_free` was false.
+- A puzzle solution, a collectible count, and a chapter order.
+- Whether the 18 November build keeps the diary names for the Star Pebble, the Bronze Seed, and the Turban of Winds.
+- Whether the Steam Deck plan in the 30 September 2026 post is a store listing. The platforms field that day in November listed Windows only.
