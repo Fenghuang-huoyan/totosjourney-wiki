@@ -24,7 +24,7 @@ export const siteConfig = {
   homeDescription:
     "Unofficial English guide to Toto's Journey (Steam AppID 3724300). Hanuman Games and Creata Games, planned release 18 November 2026, still coming soon. A cozy adventure about Toto. Not affiliated with the developers or Valve.",
   analytics: {
-    gaId: '',
+    gaId: 'G-78M48W325M',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
