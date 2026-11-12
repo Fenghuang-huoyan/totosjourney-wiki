@@ -1,9 +1,9 @@
 # Ads — totosjourney.wiki
 
-The Native Banner slot after Quick Answer is wired and **turned off**.
+The Native Banner slot after Quick Answer is wired and **turned on** for this domain only.
 
-`sites/totosjourney/ads.config.ts` sets `enabled` to false. `afterQuickAnswer.id` is empty. `afterQuickAnswer.scriptSrc` is empty. `scriptSrc` on the config is empty. `invokeBase` stays empty. No key from another game is stored here.
+`sites/totosjourney/ads.config.ts` sets `enabled` to true. `afterQuickAnswer.id` is `fcf6a95cfcc7af2cfde360dcf6850bb4`. `afterQuickAnswer.scriptSrc` and the site-wide `scriptSrc` are `https://bauval.org/21/fcf6a95cfcc7af2cfde360dcf6850bb4`. The container id is `container-fcf6a95cfcc7af2cfde360dcf6850bb4`. No key from another game is stored here.
 
-`analytics.gaId` in `sites/totosjourney/site.config.ts` is an empty string. The base layout does not load Google Analytics.
+`analytics.gaId` in `sites/totosjourney/site.config.ts` is still an empty string. The base layout does not load GA4 until a measurement id is added.
 
-The 404 page does not render a slot. When a zone is created for this domain, it belongs in this file and in `ads.config.ts` only.
+Adult and sensitive categories stay off. The 404 page does not render a slot.
